@@ -1,0 +1,8 @@
+div.fullFrameContainer {
+	width:100%;
+	text-align:center;
+}
+img.fullFrame {
+	max-width:100%;
+	margin:0 auto;
+}
