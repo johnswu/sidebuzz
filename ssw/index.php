@@ -16,32 +16,155 @@ header("Location:/index.php");
 		<title>Side.Buzz - Seattle Startup Weekend</title>
 		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-		<script src="/phpfreechat-2.1.0/client/jquery.phpfreechat.min.js" type="text/javascript"></script>
 		<script src="http://js.pusher.com/2.2/pusher.min.js"></script>
 		<script src="/js/sidebuzz.js"></script>
 		
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/font-awesome.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/css/sidebuzz.css"></link>
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" rel="stylesheet" />
 		<link rel="stylesheet" href="/css/lib/fontello.css" />
 		<link rel="stylesheet" href="/css/lib/normalize.css" />
 		<link rel="stylesheet" href="/css/index.css" />
 		<link rel="stylesheet" href="/css/sidebar.css" />
+		<link rel="stylesheet" href="/css/chat.css" />
 		
-		<link rel="stylesheet" type="text/css" href="/phpfreechat-2.1.0/client/themes/carbon/jquery.phpfreechat.min.css" />
 	</head>
 	<body>
 	
 		<div class="wrapper jsc-sidebar-content jsc-sidebar-pulled">
 			<!-- <nav> -->
-				<a href="#" class="icon-menu link-menu jsc-sidebar-trigger"></a>
+				<a href="#" class="icon-menu link-menu jsc-sidebar-trigger" style="text-decoration:none;"></a>
 				<div class="eventTitle"> - Seattle Startup Weekend</div>
 				<img style="float:right;height:35px;" src="<?php echo $userData['picture'] ?>" />
 			<!-- </nav> -->
 			<section class="main-content">
 				<iframe id="hostFrame" style="border:1px solid #cccccc;">
 				</iframe>
-				<div id="chatContainer">
-					<div id="mychat"><a href="http://www.phpfreechat.net">phpFreeChat: simple Web chat</a></div>
+				<div id="chatContainer" style="text-align:left;">
+					
+					<!-- begin chat widget -->
+                    <!-- /.panel -->
+                    <div class="chat-panel panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-comments fa-fw"></i>
+                            Chat
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu slidedown">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-refresh fa-fw"></i> Refresh
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-check-circle fa-fw"></i> Available
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-times fa-fw"></i> Busy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-clock-o fa-fw"></i> Away
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-sign-out fa-fw"></i> Sign Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <ul class="chat">
+                                <li class="left clearfix">
+                                    <span class="chat-img pull-left">
+                                        <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" />
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font">Jack Sparrow</strong> 
+                                            <small class="pull-right text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> 12 mins ago
+                                            </small>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="right clearfix">
+                                    <span class="chat-img pull-right">
+                                        <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" />
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <small class=" text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> 13 mins ago</small>
+                                            <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="left clearfix">
+                                    <span class="chat-img pull-left">
+                                        <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" />
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font">Jack Sparrow</strong> 
+                                            <small class="pull-right text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> 14 mins ago</small>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="right clearfix">
+                                    <span class="chat-img pull-right">
+                                        <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" />
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <small class=" text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i> 15 mins ago</small>
+                                            <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.panel-body -->
+                        <div class="panel-footer">
+                            <div class="input-group">
+                                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning btn-sm" id="btn-chat">
+                                        Send
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /.panel-footer -->
+                    </div>
+                    <!-- /.panel .chat-panel -->
+					
+					<!-- end chat widget -->
 				</div>
 			</section>
 		</div>
@@ -56,7 +179,11 @@ header("Location:/index.php");
 			</ul>
 		</nav>
 						
+		<script src="/js/bootstrap.js"></script>
 		<script src="/js/sidebar.js"></script>
+		<script src="/js/moment.min.js"></script>
+		<script src="/js/socket.io.js"></script>
+		<script src="/js/chat.js"></script>
 		<script>
 			$('#jsi-nav').sidebar({
 				trigger: '.jsc-sidebar-trigger',
@@ -66,10 +193,7 @@ header("Location:/index.php");
 		</script>
 
 		<script type="text/javascript">
-		  $('#mychat').phpfreechat({ 
-				serverUrl: '/phpfreechat-2.1.0/server',
-				show_powered_by: false
-				});
+			
 		</script>
 		<script type="text/javascript">
 			// Reset iframe height after window resize

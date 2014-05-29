@@ -98,7 +98,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #chatContainer {
-	opacity: 0.95;
     position: absolute;
     top: 38px;
     width: 50%;

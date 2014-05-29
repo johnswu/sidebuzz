@@ -20,6 +20,10 @@ function resizeHostFrame() {
 	
 	document.getElementById('hostFrame').style.height=winH+"px";
 	document.getElementById('hostFrame').style.width=winW+"px";
+	
+	// also size chat window
+	winH = winH - 130;
+	$(".chat-panel > .panel-body").height(winH+"px");
 }
 
 function checkCurrentPush() {
@@ -74,7 +78,7 @@ function checkPushCycle() {
 
 function openChat() {
 	$('#chatContainer').slideToggle();
-	$('.pfc-compose > textarea').width('94%');
+	//$('#chatContainer').animate({'width': 'toggle'});
 }
 
 function sizeFullFrameImage() {
